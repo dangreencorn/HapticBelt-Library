@@ -31,12 +31,12 @@ void HapticBelt::lightDirection(float dir, float err) {
 	for (int i = 0; i < strip->numPixels(); i++) {
 		if (abs(i*angularDistanceLights - dir) < (err + 2/3 * angularDistanceLights)) {
 			if (abs(i*angularDistanceLights - dir) < (2/3 * angularDistanceLights)) {
-				strip->setPixelColor(i, keyColor);
+				strip->setPixelColor(i, 255,0,0);
 			} else {
-				strip->setPixelColor(i, washColor);	
+				strip->setPixelColor(i, 0,255,0);	
 			}
 		} else {
-			strip->setPixelColor(i, backgroundColor);
+			strip->setPixelColor(i, 0,0,255);
 		}
 	}
 	strip->show();
@@ -55,7 +55,7 @@ void HapticBelt::clearVibration() {
 
 void HapticBelt::clearLight() {
 	for (int i = 0; i < strip->numPixels(); i++) {
-		strip->setPixelColor(i, backgroundColor);
+		strip->setPixelColor(i, 0,0,255);
 	}
 	strip->show();
 }
