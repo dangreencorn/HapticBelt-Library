@@ -1,0 +1,8 @@
+HapticBelt			KEYWORD1
+setDirection			KEYWORD2
+vibrateDirection		KEYWORD2
+lightDirection			KEYWORD2
+clear				KEYWORD2
+clearVibration			KEYWORD2
+clearLight			KEYWORD2
+getDirectionFromCompass		KEYWORD2
