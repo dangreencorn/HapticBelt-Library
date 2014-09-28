@@ -1,6 +1,6 @@
 #include "HapticBelt.h"
 
-HapticBelt::HapticBelt(Adafruit_NeoPixel *pixelStrip, int vibrationMotors[]) {
+HapticBelt::HapticBelt(Adafruit_NeoPixel *pixelStrip, int *vibrationMotors) {
 	motors = vibrationMotors;
 	strip = pixelStrip;
 

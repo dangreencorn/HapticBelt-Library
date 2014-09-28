@@ -7,12 +7,12 @@
 class HapticBelt {
 private:
 	Adafruit_NeoPixel* strip;
-    int motors[];
+    int* motors;
     float angularDistanceLights;
     float angularDistanceMotors;
 
 public:
-    HapticBelt(Adafruit_NeoPixel* pixelStrip, int vibrationMotors[]);
+    HapticBelt(Adafruit_NeoPixel* pixelStrip, int* vibrationMotors);
     ~HapticBelt();
     void signalLeft();
     void signalRight();
