@@ -14,13 +14,15 @@ private:
 public:
     HapticBelt(Adafruit_NeoPixel* pixelStrip, int vibrationMotors[]);
     ~HapticBelt();
+    void signalLeft();
+    void signalRight();
     void setDirection(float dir, float err);
     void vibrateDirection(float dir, float err);
     void lightDirection(float dir, float err);
     void clear();
     void clearVibration();
     void clearLight();
-    float getDirectionFromCompass(float heading);
+    float getDirectionFromCompass(float heading, float compassDirection);
 };
 
 #endif
